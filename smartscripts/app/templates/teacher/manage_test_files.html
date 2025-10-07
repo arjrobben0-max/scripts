@@ -1,0 +1,198 @@
+﻿{% extends "base.html" %}
+{% block title %}Manage Test Files & Front Page Review{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-3">📂 Manage & Review Files for Test: <span class="text-primary">{{ test.title }}</span></h2>
+    <hr>
+
+    <!-- Flash messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show mt-2" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <!-- File Upload Cards -->
+    <div class="row">
+        {% for key, label in file_types %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-secondary">{{ label }}</h5>
+
+                    {% if file_urls[key] %}
+                        <p class="text-success fw-bold">✅ File uploaded</p>
+                        <div class="d-flex gap-2">
+                            <a href="{{ file_urls[key] }}" target="_blank" class="btn btn-sm btn-outline-primary flex-fill">View</a>
+                            <form method="POST" action="{{ url_for('manage_bp.delete_file', test_id=test.id, file_type=key) }}">
+                                {{ delete_forms[key].hidden_tag() }}
+                                <button type="submit" class="btn btn-sm btn-outline-danger flex-fill">Delete</button>
+                            </form>
+                        </div>
+                    {% else %}
+                        <p class="text-muted">📭 No file uploaded yet</p>
+                        <form method="POST" enctype="multipart/form-data"
+                              action="{{ url_for('manage_bp.upload_file', test_id=test.id, file_type=key) }}">
+                            {{ upload_forms[key].hidden_tag() }}
+                            <div class="input-group input-group-sm mb-2">
+                                {{ upload_forms[key].file(class="form-control") }}
+                                <button type="submit" class="btn btn-success">Upload</button>
+                            </div>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <hr>
+
+    <!-- Start Preprocessing -->
+    <h4 class="mt-4">⚙️ Preprocessing & Student Detection</h4>
+    <form method="POST" action="{{ url_for('manage_bp.start_preprocessing', test_id=test.id) }}">
+        {{ preprocessing_form.hidden_tag() }}
+        <button type="submit" class="btn btn-primary">Start OCR Preprocessing</button>
+    </form>
+
+    {% if pages %}
+    <!-- Front Page Review -->
+    <hr>
+    <h4 class="mt-4">🔍 Front Page Review & OCR Corrections</h4>
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <button class="btn btn-secondary" id="prev-page">⬅ Previous</button>
+        <span id="page-counter">Page 1 of {{ pages|length }}</span>
+        <button class="btn btn-secondary" id="next-page">Next ➡</button>
+    </div>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 text-center">
+                    <img id="student-image" src="{{ pages[0].image_url }}" class="img-fluid border rounded" />
+                </div>
+                <div class="col-md-6">
+                    <form method="POST" action="{{ url_for('review_bp.submit_overrides', test_id=test.id) }}" id="override-form">
+                        {{ csrf_token() }}
+                        <input type="hidden" name="count" value="1">
+                        <input type="hidden" name="submission_id_0" value="{{ pages[0].submission_id }}">
+                        <input type="hidden" name="pdf_path_0" value="{{ pages[0].pdf_path }}">
+
+                        <div class="mb-2">
+                            <label class="form-label">OCR Name</label>
+                            <input type="text" class="form-control" name="corrected_name_0" value="{{ pages[0].ocr_name }}">
+                        </div>
+                        <div class="mb-2">
+                            <label class="form-label">OCR ID</label>
+                            <input type="text" class="form-control" name="corrected_id_0" value="{{ pages[0].ocr_id }}">
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Confidence</label>
+                            <input type="range" class="form-range" min="0" max="1" step="0.01" value="{{ pages[0].confidence }}" id="confidence-slider">
+                            <span id="confidence-value">{{ pages[0].confidence }}</span>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">OCR Text (keywords highlighted)</label>
+                            <pre class="border p-2" id="ocr-text">{{ pages[0].ocr_text|safe }}</pre>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Save Override</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download ZIP -->
+    <div class="mb-4">
+        <a href="{{ url_for('review_bp.download_zip', test_id=test.id) }}" class="btn btn-primary">📦 Download PDFs + Logs</a>
+    </div>
+
+    <script>
+    let currentPage = 0;
+    const pages = {{ pages|tojson }};
+    const totalPages = pages.length;
+
+    function updatePage(index) {
+        currentPage = index;
+        const page = pages[currentPage];
+        document.getElementById('student-image').src = page.image_url;
+        document.querySelector('input[name="submission_id_0"]').value = page.submission_id;
+        document.querySelector('input[name="pdf_path_0"]').value = page.pdf_path;
+        document.querySelector('input[name="corrected_name_0"]').value = page.ocr_name;
+        document.querySelector('input[name="corrected_id_0"]').value = page.ocr_id;
+        document.getElementById('confidence-slider').value = page.confidence;
+        document.getElementById('confidence-value').innerText = page.confidence;
+        document.getElementById('ocr-text').innerHTML = page.ocr_text;
+        document.getElementById('page-counter').innerText = `Page ${currentPage + 1} of ${totalPages}`;
+    }
+
+    document.getElementById('next-page').addEventListener('click', () => {
+        if (currentPage < totalPages - 1) updatePage(currentPage + 1);
+    });
+    document.getElementById('prev-page').addEventListener('click', () => {
+        if (currentPage > 0) updatePage(currentPage - 1);
+    });
+
+    document.getElementById('confidence-slider').addEventListener('input', (e) => {
+        document.getElementById('confidence-value').innerText = e.target.value;
+    });
+    </script>
+    {% endif %}
+
+    <!-- OCR Task Progress (Optional) -->
+    {% if test.ocr_task_id %}
+      <div class="mt-3">
+        <form method="POST" action="{{ url_for('manage_bp.pause_task', task_id=test.ocr_task_id) }}" class="d-inline">
+          <button class="btn btn-warning btn-sm">⏸ Pause</button>
+        </form>
+        <form method="POST" action="{{ url_for('manage_bp.resume_task', task_id=test.ocr_task_id) }}" class="d-inline">
+          <button class="btn btn-success btn-sm">▶ Resume</button>
+        </form>
+        <form method="POST" action="{{ url_for('manage_bp.cancel_task', task_id=test.ocr_task_id) }}" class="d-inline">
+          <button class="btn btn-danger btn-sm">❌ Cancel</button>
+        </form>
+      </div>
+
+      <div class="mt-3">
+        <h5>OCR Progress</h5>
+        <div class="progress">
+          <div id="progress-bar" class="progress-bar progress-bar-striped progress-bar-animated" 
+               role="progressbar" style="width: 0%">0%</div>
+        </div>
+      </div>
+
+      <script>
+      function updateProgress() {
+        fetch("{{ url_for('manage_bp.task_status', task_id=test.ocr_task_id) }}")
+          .then(r => r.json())
+          .then(data => {
+            let bar = document.getElementById("progress-bar");
+            bar.style.width = data.progress + "%";
+            bar.innerText = data.progress + "%";
+            if (data.state !== "COMPLETED" && data.state !== "FAILURE") {
+              setTimeout(updateProgress, 2000);
+            } else if (data.state === "COMPLETED") {
+              bar.classList.remove("progress-bar-animated");
+              bar.classList.add("bg-success");
+            } else if (data.state === "FAILURE") {
+              bar.classList.remove("progress-bar-animated");
+              bar.classList.add("bg-danger");
+              bar.innerText = "Failed";
+            }
+          });
+      }
+      updateProgress();
+      </script>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,171 @@
+﻿{% extends "teacher/base.html" %}
+
+{% block title %}👩‍🏫 Review Extracted Students - {{ test.title }}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h2 class="mb-3 text-primary">
+    📚 Review Extracted Students for Test: <strong>{{ test.title }}</strong>
+  </h2>
+  <p class="text-muted">Confirm or correct each student’s details before finalizing scripts.</p>
+
+  <!-- Flash Messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category or 'info' }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <form method="POST" action="{{ url_for('teacher_bp.confirm_extracted_students', test_id=test.id) }}">
+    {{ form.hidden_tag() }}
+
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle table-hover">
+        <thead class="table-light">
+          <tr>
+            <th>📄 Page Range</th>
+            <th>👤 Student Name <small class="text-muted">(editable)</small></th>
+            <th>🆔 Student ID <small class="text-muted">(editable)</small></th>
+            <th class="text-center">Confidence</th>
+            <th class="text-center">✅ Confirmed</th>
+            <th class="text-center">🔍 Preview PDF</th>
+            <th>🚩 Flags / Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for script in extracted_scripts %}
+            <tr class="{% if not script.student_name or not script.student_id %}table-warning{% endif %}">
+              <td>{{ script.page_range or (script.page_start ~ '–' ~ script.page_end) or "N/A" }}</td>
+
+              <!-- Editable Name -->
+              <td>
+                <input type="text" name="script_{{ script.id }}_name"
+                       class="form-control {% if not script.student_name %}is-invalid{% endif %}"
+                       value="{{ script.student_name or '' }}"
+                       placeholder="Enter student name"
+                       required>
+              </td>
+
+              <!-- Editable ID -->
+              <td>
+                <input type="text" name="script_{{ script.id }}_student_id"
+                       class="form-control {% if not script.student_id %}is-invalid{% endif %}"
+                       value="{{ script.student_id or '' }}"
+                       placeholder="Enter student ID"
+                       required>
+              </td>
+
+              <!-- Confidence Slider -->
+              <td class="text-center">
+                <input type="range" min="0" max="1" step="0.01"
+                       value="{{ script.confidence or 0 }}"
+                       class="form-range confidence-slider"
+                       id="confidence-slider-{{ loop.index0 }}">
+                <div class="small text-muted" id="confidence-value-{{ loop.index0 }}">
+                  {{ script.confidence or 0 }}
+                </div>
+              </td>
+
+              <!-- Confirm Checkbox -->
+              <td class="text-center">
+                <input type="checkbox" class="form-check-input"
+                       name="script_{{ script.id }}_confirmed"
+                       {% if script.confirmed %}checked{% endif %}>
+              </td>
+
+              <!-- Preview PDF -->
+              <td class="text-center">
+                {% if script.extracted_pdf_filename %}
+                  <button type="button" class="btn btn-sm btn-outline-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#previewModal{{ script.id }}">
+                    📄 View
+                  </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="previewModal{{ script.id }}" tabindex="-1"
+                       aria-labelledby="previewModalLabel{{ script.id }}" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="previewModalLabel{{ script.id }}">
+                            Preview: {{ script.student_name or "Unnamed Student" }}
+                          </h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <iframe src="{{ url_for('file_routes_bp.uploaded_file', filename=script.extracted_pdf_filename) }}"
+                                  width="100%" height="600px" style="border: none;"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% else %}
+                  <span class="text-muted">N/A</span>
+                {% endif %}
+              </td>
+
+              <!-- Flags / Notes -->
+              <td>
+                {% if not script.student_name %}
+                  <span class="badge bg-danger" data-bs-toggle="tooltip" title="Missing Name">Missing Name</span>
+                {% endif %}
+                {% if not script.student_id %}
+                  <span class="badge bg-warning text-dark" data-bs-toggle="tooltip" title="Missing ID">Missing ID</span>
+                {% endif %}
+                {% if script.duplicate %}
+                  <span class="badge bg-info text-dark" data-bs-toggle="tooltip" title="Possible duplicate ID">Duplicate ID</span>
+                {% endif %}
+                {% if script.manual_override %}
+                  <span class="badge bg-secondary" data-bs-toggle="tooltip" title="Manually corrected">Overridden</span>
+                {% endif %}
+              </td>
+            </tr>
+          {% else %}
+            <tr>
+              <td colspan="7" class="text-center text-muted">No extracted student scripts found.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="mt-4 d-flex justify-content-between">
+      <a href="{{ url_for('teacher_bp.review_test', test_id=test.id) }}" class="btn btn-outline-secondary rounded-pill">
+        ← Back to Test Review
+      </a>
+      <button type="submit" class="btn btn-success rounded-pill px-4">
+        ✅ Save & Proceed
+      </button>
+    </div>
+  </form>
+
+  <!-- Download ZIP -->
+  <div class="mt-4">
+    <a href="{{ url_for('review_bp.download_zip', test_id=test.id) }}" class="btn btn-primary">
+      📦 Download Processed PDFs + Logs
+    </a>
+  </div>
+</div>
+
+<script>
+  // Enable tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
+  // Update confidence values dynamically
+  document.querySelectorAll('.confidence-slider').forEach((slider, index) => {
+    slider.addEventListener('input', (e) => {
+      document.getElementById('confidence-value-' + index).innerText = e.target.value;
+    });
+  });
+</script>
+{% endblock %}

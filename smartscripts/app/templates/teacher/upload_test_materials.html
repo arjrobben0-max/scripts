@@ -1,0 +1,64 @@
+﻿{% extends "base.html" %}
+{% block title %}Upload Test Materials{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-3">📂 Upload Test Materials</h2>
+  <p class="text-muted">Upload the required and optional files for this test.</p>
+
+  <!-- Flash messages -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <!-- Upload form -->
+  <form method="POST" enctype="multipart/form-data" action="{{ url_for('dashboard_bp.create_test_redirect') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="row g-3">
+      <!-- File uploads -->
+      <div class="col-md-6">
+        <label class="form-label">Question Paper (Required)</label>
+        {{ form.question_paper(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Marking Guide (Required)</label>
+        {{ form.marking_guide(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Rubric (Optional)</label>
+        {{ form.rubric(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Answered Script (Optional)</label>
+        {{ form.answered_script(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Class List (Optional)</label>
+        {{ form.class_list(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Student Scripts (Combined PDF, Required)</label>
+        {{ form.combined_scripts(class="form-control") }}
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
+      <a href="{{ url_for('dashboard_bp.dashboard') }}" class="btn btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

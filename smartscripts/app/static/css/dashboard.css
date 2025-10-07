@@ -1,0 +1,179 @@
+/* =========
+   LIGHT MODE (default)
+   ========= */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Cards */
+.card {
+  background-color: #e9f5f2; /* same as manage_test_files.html */
+  border-radius: 0.75rem;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+/* Tables */
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.table th {
+  font-weight: 600;
+  background-color: #0d6efd;
+  color: #fff;
+}
+.table td,
+.table th {
+  vertical-align: middle;
+}
+
+/* Buttons & Icons */
+.btn i {
+  vertical-align: middle;
+}
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Badges */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.4em 0.6em;
+  border-radius: 0.5rem;
+}
+.badge.bg-success {
+  background-color: #198754 !important;
+}
+.badge.bg-danger {
+  background-color: #dc3545 !important;
+}
+.badge.bg-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+/* Progress */
+.progress {
+  height: 28px;
+  border-radius: 14px;
+  background-color: #e9ecef;
+}
+.progress-bar {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 28px;
+  background-color: #0d6efd;
+}
+
+/* =========
+   DARK MODE
+   ========= */
+body.dark-mode {
+  background-color: #1e1e2f;
+  color: #eaeaea;
+}
+
+/* Cards */
+body.dark-mode .card {
+  background-color: #2a2a40;
+  color: #eaeaea;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+body.dark-mode .card-title {
+  color: #0d6efd; /* keep primary blue in dark mode */
+}
+
+/* Tables */
+body.dark-mode .table {
+  background-color: #2a2a40;
+  color: #ddd;
+}
+body.dark-mode .table thead {
+  background-color: #0d6efd; /* keep consistent with light mode */
+  color: #fff;
+}
+body.dark-mode .table tbody tr:hover {
+  background-color: #3b3b54;
+}
+
+/* Badges */
+body.dark-mode .badge.bg-danger {
+  background-color: #c62828 !important;
+}
+body.dark-mode .badge.bg-success {
+  background-color: #2e7d32 !important;
+}
+body.dark-mode .badge.bg-warning {
+  background-color: #fbc02d !important;
+  color: #1e1e2f !important;
+}
+
+/* Buttons */
+body.dark-mode .btn-outline-dark {
+  color: #eaeaea;
+  border-color: #aaa;
+}
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #444;
+}
+body.dark-mode .btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* Selects */
+body.dark-mode select,
+body.dark-mode .form-select {
+  background-color: #2a2a40;
+  color: #eaeaea;
+  border-color: #555;
+}
+
+/* Progress */
+body.dark-mode .progress {
+  background-color: #444;
+}
+body.dark-mode .progress-bar {
+  background-color: #0d6efd;
+}
+
+/* =========
+   CARD GRID VIEW
+   ========= */
+#cardContainer {
+  display: none;
+}
+#cardContainer.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+.test-card {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.test-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}

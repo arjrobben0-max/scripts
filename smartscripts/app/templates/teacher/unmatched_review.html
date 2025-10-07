@@ -1,0 +1,61 @@
+{% extends "teacher/base.html" %}
+{% block title %}Unmatched Student Review{% endblock %}
+
+{% block content %}
+<div class="container mx-auto p-6">
+    <h1 class="text-2xl font-bold mb-4">Unmatched / Fuzzy-Matched Students</h1>
+
+    {% if unmatched_students %}
+    <form method="POST" action="{{ url_for('review_bp.save_overrides') }}">
+        <table class="table-auto w-full border-collapse border border-gray-300 mb-6">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-2 py-1">Page</th>
+                    <th class="border border-gray-300 px-2 py-1">OCR Student ID</th>
+                    <th class="border border-gray-300 px-2 py-1">OCR Name</th>
+                    <th class="border border-gray-300 px-2 py-1">Matched?</th>
+                    <th class="border border-gray-300 px-2 py-1">Confidence</th>
+                    <th class="border border-gray-300 px-2 py-1">Override Student ID</th>
+                    <th class="border border-gray-300 px-2 py-1">Override Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in unmatched_students %}
+                <tr class="hover:bg-gray-50">
+                    <td class="border border-gray-300 px-2 py-1">{{ student.page }}</td>
+                    <td class="border border-gray-300 px-2 py-1">{{ student.ocr_id or "N/A" }}</td>
+                    <td class="border border-gray-300 px-2 py-1">{{ student.ocr_name or "N/A" }}</td>
+                    <td class="border border-gray-300 px-2 py-1">
+                        {% if student.matched %}
+                            ✅
+                        {% else %}
+                            ❌
+                        {% endif %}
+                    </td>
+                    <td class="border border-gray-300 px-2 py-1">{{ student.confidence | round(2) }}</td>
+                    <td class="border border-gray-300 px-2 py-1">
+                        <input type="text" name="override_id_{{ student.page }}" 
+                               value="{{ student.student_id or '' }}" 
+                               class="border rounded px-1 py-0.5 w-full">
+                    </td>
+                    <td class="border border-gray-300 px-2 py-1">
+                        <input type="text" name="override_name_{{ student.page }}" 
+                               value="{{ student.name or '' }}" 
+                               class="border rounded px-1 py-0.5 w-full">
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <div class="flex justify-end">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Save Overrides
+            </button>
+        </div>
+    </form>
+    {% else %}
+    <p class="text-gray-600">All student scripts matched successfully. No overrides needed.</p>
+    {% endif %}
+</div>
+{% endblock %}

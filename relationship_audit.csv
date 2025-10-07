@@ -1,0 +1,6 @@
+"File","Class","LineNumber","Relationship","BackPopulates"
+"audit_log.py","audit_log","1","User","audit_logs"
+"extracted_student_script.py","extracted_student_script","1","Test","extracted_scripts"
+"ocr_override_log.py","ocr_override_log","1","Test","override_logs"
+"page_review.py","page_review","1","User","page_reviews"
+"test.py","test","1","User","tests"

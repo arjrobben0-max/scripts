@@ -1,0 +1,58 @@
+2025-09-29 04:33:27,653 INFO: Connected to DB successfully: postgresql://project_db_9kd0_user:j8CUHXS1cZTX3v4B552dijy6wT09O0qf@dpg-d2rgt4mr433s73flfb80-a.oregon-postgres.render.com/project_db_9kd0
+2025-09-29 04:33:27,654 INFO: DB engine and session initialized.
+2025-09-29 04:33:27,950 INFO: App created successfully.
+2025-09-29 04:33:27,954 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads
+2025-09-29 04:33:27,957 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static
+2025-09-29 04:33:28,015 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-29 04:33:28,019 INFO: [33mPress CTRL+C to quit[0m
+2025-09-29 04:38:58,635 WARNING: DB session rolled back due to exception.
+2025-09-29 04:38:58,691 INFO: 127.0.0.1 - - [29/Sep/2025 04:38:58] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-09-29 04:38:59,052 ERROR: Error on request:
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\helpers.py", line 232, in url_for
+    return current_app.url_for(
+    
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1121, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1110, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+    
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'auth.login'. Did you mean 'teacher_bp.auth_bp.login' instead?

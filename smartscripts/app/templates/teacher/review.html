@@ -1,0 +1,185 @@
+﻿{% extends "base.html" %}
+{% block title %}Review Submission - {{ test.title }}{% endblock %}
+
+{% block content %}
+<style>
+  .header-accent {
+    color: #2c7be5;
+    font-weight: 700;
+  }
+  .file-label {
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+  .filename {
+    font-family: monospace;
+    color: #555;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-custom {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-group > form {
+    margin: 0;
+  }
+</style>
+
+<div class="container my-5" style="max-width: 900px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+  <h2 class="header-accent mb-4">📝 Review Submission for <strong>{{ test.title }}</strong></h2>
+  <p class="text-muted mb-4"><strong>Date:</strong> {{ test.date.strftime('%Y-%m-%d') }}</p>
+
+  <!-- Teacher Materials -->
+  <section class="mb-5">
+    <h3 class="mb-3 border-bottom pb-2">📚 Teacher Materials</h3>
+
+    {% set uploaded_files = [
+      ('question_paper', '📖 Question Paper', test.question_paper_path),
+      ('marking_guide', '🗂 Marking Guide', test.marking_guide_path),
+      ('rubric', '📊 Rubric', test.rubric_path),
+      ('answered_script', '📝 Answered Script', test.answered_script_path),
+      ('class_list', '📋 Class List', test.class_list_path),
+      ('combined_scripts', '📚 Combined Student Scripts', test.combined_scripts_path)
+    ] %}
+
+    <div class="row g-4">
+      {% for key, label, path in uploaded_files %}
+      <div class="col-12 col-md-6 col-lg-4 d-flex">
+        <div class="card card-custom h-100">
+          <div class="card-header bg-primary bg-opacity-10 border-0">
+            <h5 class="mb-0 file-label">{{ label }}</h5>
+          </div>
+          <div class="card-body d-flex flex-column">
+
+            {% if path %}
+              {% set filename = path.split('/')[-1] %}
+              <p class="filename mb-3" title="{{ filename }}">📄 {{ filename }}</p>
+
+              <div class="btn-group mb-3" role="group">
+                <a href="{{ url_for('preview_bp.preview_file', file_type=key, test_id=test.id) }}" target="_blank"
+                   class="btn btn-outline-primary btn-sm">👁️ Preview</a>
+
+                {% if key == 'marking_guide' and guide_id %}
+                  <a href="{{ url_for('download_bp.download_marking_guide', guide_id=guide_id) }}"
+                     class="btn btn-outline-primary btn-sm">⬇️ Download</a>
+                {% elif key == 'rubric' and rubric_id %}
+                  <a href="{{ url_for('download_bp.download_rubric', guide_id=rubric_id) }}"
+                     class="btn btn-outline-primary btn-sm">⬇️ Download</a>
+                {% else %}
+                  <a href="{{ url_for('download_bp.' ~ ('download_' + key), test_id=test.id) }}"
+                     class="btn btn-outline-primary btn-sm">⬇️ Download</a>
+                {% endif %}
+
+                <a href="{{ url_for('teacher_bp.dashboard_bp.delete_file', file_type=key, test_id=test.id) }}"
+                   class="btn btn-outline-danger btn-sm"
+                   onclick="return confirm('Delete this file?');">🗑️ Delete</a>
+              </div>
+            {% else %}
+              <p class="text-danger fw-semibold fst-italic">❌ Not uploaded</p>
+            {% endif %}
+
+            <form method="POST" enctype="multipart/form-data"
+                  action="{{ url_for('upload_bp.upload_individual_file', file_type=key, test_id=test.id) }}"
+                  class="mt-auto">
+              {{ csrf_token() }}
+              <div class="input-group input-group-sm">
+                <input type="file" name="{{ key }}" accept=".pdf,.doc,.docx,.txt,.csv"
+                       class="form-control" required id="upload_{{ key }}"
+                       onchange="this.form.submit()">
+                <label for="upload_{{ key }}" class="btn btn-primary mb-0">📤 Upload</label>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Student Submission -->
+  {% if submission %}
+  <section class="mb-5">
+    <h3 class="mb-3 border-bottom pb-2">👨‍🎓 Student Submission</h3>
+    {% if submission.filename %}
+      <p class="filename" title="{{ submission.filename }}">📄 {{ submission.filename }}</p>
+      <div class="btn-group mb-3">
+        <a href="{{ url_for('preview_bp.preview_file', file_type='submission', test_id=submission.id) }}" target="_blank"
+           class="btn btn-outline-primary btn-sm">👁️ Review Submission</a>
+        <a href="{{ url_for('download_bp.download_student_submission', submission_id=submission.id) }}"
+           class="btn btn-outline-primary btn-sm">⬇️ Download Submission</a>
+      </div>
+    {% else %}
+      <p class="text-danger fw-semibold fst-italic">❌ Not uploaded</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <!-- Next Phase Actions -->
+  {% if test.all_required_uploaded %}
+  <div class="mb-4">
+    <h5 class="text-success">✅ All Required Files Uploaded</h5>
+    <a href="{{ url_for('teacher_bp.review_bp.extract_class_list', test_id=test.id) }}" class="btn btn-secondary me-2">📋 Extract Class List</a>
+    <a href="{{ url_for('teacher_bp.review_bp.start_ai_grading', test_id=test.id) }}" class="btn btn-success me-2">🤖 Start Grading</a>
+  </div>
+  {% else %}
+  <div class="alert alert-warning">⚠️ Upload all required files to enable Extract or Grading actions.</div>
+  {% endif %}
+
+  <hr class="my-4">
+
+  <!-- Manual Review Form -->
+  <section>
+    <h3 class="mb-3 text-secondary">✍️ Manual Review</h3>
+    {% if submission %}
+    <form method="POST"
+          action="{{ url_for('teacher_bp.review_bp.manual_review_submit', submission_id=submission.id) }}"
+          class="needs-validation" novalidate>
+      {{ csrf_token() }}
+
+      <div class="mb-3">
+        <label for="grade" class="form-label">Grade</label>
+        <input type="number" name="grade" id="grade" class="form-control"
+               min="0" step="0.1" value="{{ submission.grade or '' }}" required>
+        <div class="invalid-feedback">Please enter a valid grade.</div>
+      </div>
+
+      <div class="mb-4">
+        <label for="comments" class="form-label">Feedback</label>
+        <textarea name="comments" id="comments" class="form-control" rows="5" required>{{ submission.feedback or '' }}</textarea>
+        <div class="invalid-feedback">Please provide feedback.</div>
+      </div>
+
+      <button type="submit" class="btn btn-success px-4 rounded-pill">✅ Submit Review</button>
+    </form>
+    {% else %}
+    <p class="text-danger fst-italic fw-semibold">Error: submission data missing.</p>
+    {% endif %}
+  </section>
+
+  <a href="{{ url_for('teacher_bp.dashboard_bp.list_tests') }}" class="btn btn-secondary mt-4">← Back to Tests List</a>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  const forms = document.querySelectorAll('.needs-validation');
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+    }, false);
+  });
+})();
+</script>
+
+{% endblock %}

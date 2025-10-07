@@ -1,0 +1,126 @@
+﻿{% extends "teacher/base.html" %}
+
+{% block title %}⚙️ Preprocessing & Student Review{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+  <h3 class="mb-4 text-primary">⚙️ Preprocessing & Manual Review - Page {{ page_num }}</h3>
+
+  {% if page_image %}
+    <div class="text-center mb-4 position-relative">
+      <img src="{{ url_for('file_routes_bp.uploaded_file', filename=page_image|basename) }}"
+           alt="Page Image"
+           class="img-fluid rounded border shadow"
+           style="max-height: 800px;">
+      {% if front_page_score %}
+        <span class="badge bg-info position-absolute top-0 end-0 m-2"
+              title="Front page confidence score">
+          🔎 Score: {{ front_page_score }}
+        </span>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="alert alert-warning d-flex align-items-center" role="alert">
+      ⚠️ <span class="ms-2">No image found for this page.</span>
+    </div>
+  {% endif %}
+
+  <!-- Per-Student Extracted PDFs -->
+  {% if student_scripts %}
+    <h5 class="mt-4 mb-2">📄 Extracted Student Scripts on this page:</h5>
+    <div class="row g-3 mb-4">
+      {% for script in student_scripts %}
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body p-2">
+              <h6 class="card-title mb-1">{{ script.student_name or "Unnamed" }}</h6>
+              <p class="card-text small mb-1">ID: {{ script.student_id or "N/A" }}</p>
+              <p class="card-text small mb-1">Confidence: {{ script.confidence }}</p>
+
+              {% if script.extracted_pdf %}
+                <a href="{{ url_for('file_routes_bp.uploaded_file', filename=script.extracted_pdf) }}"
+                   target="_blank"
+                   class="btn btn-sm btn-outline-primary w-100 mb-1"
+                   title="View PDF for {{ script.student_name }}">
+                  📄 View PDF
+                </a>
+              {% else %}
+                <span class="text-muted">No PDF available</span>
+              {% endif %}
+
+              <!-- Missing info badges -->
+              <div class="mt-1">
+                {% if not script.student_name %}
+                  <span class="badge bg-danger" title="Missing Name">Missing Name</span>
+                {% endif %}
+                {% if not script.student_id %}
+                  <span class="badge bg-warning text-dark" title="Missing ID">Missing ID</span>
+                {% endif %}
+              </div>
+
+              <!-- Inline OCR corrections -->
+              <form method="POST"
+                    action="{{ url_for('review_bp.submit_overrides', test_id=test_id) }}"
+                    class="mt-2">
+                {{ csrf_token() }}
+                <input type="hidden" name="submission_id_0" value="{{ script.submission_id }}">
+                <input type="hidden" name="pdf_path_0" value="{{ script.pdf_path }}">
+                <div class="mb-1">
+                  <input type="text" class="form-control form-control-sm" name="corrected_name_0"
+                         placeholder="Correct Name" value="{{ script.ocr_name }}">
+                </div>
+                <div class="mb-1">
+                  <input type="text" class="form-control form-control-sm" name="corrected_id_0"
+                         placeholder="Correct ID" value="{{ script.ocr_id }}">
+                </div>
+                <div class="mb-1">
+                  <label for="confidence-slider-{{ loop.index0 }}" class="form-label small">Confidence</label>
+                  <input type="range" class="form-range" min="0" max="1" step="0.01"
+                         value="{{ script.confidence }}" id="confidence-slider-{{ loop.index0 }}">
+                  <span id="confidence-value-{{ loop.index0 }}">{{ script.confidence }}</span>
+                </div>
+                <button type="submit" class="btn btn-success btn-sm w-100">Save Override</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- OCR Text with keyword highlight -->
+  {% if page_ocr_text %}
+    <div class="mb-4">
+      <label class="form-label">📝 OCR Text (keywords highlighted)</label>
+      <pre class="border p-2" style="max-height: 300px; overflow-y:auto;">{{ page_ocr_text|safe }}</pre>
+    </div>
+  {% endif %}
+
+  <!-- Navigation -->
+  <div class="d-flex justify-content-between">
+    {% if page_num > 1 %}
+      <a href="{{ url_for('teacher_bp.review_split_page', test_id=test_id, page_num=page_num-1) }}"
+         class="btn btn-secondary">⬅ Previous Page</a>
+    {% endif %}
+    {% if page_num < total_pages %}
+      <a href="{{ url_for('teacher_bp.review_split_page', test_id=test_id, page_num=page_num+1) }}"
+         class="btn btn-secondary">Next Page ➡</a>
+    {% endif %}
+  </div>
+
+  <!-- Download ZIP -->
+  <div class="mt-4">
+    <a href="{{ url_for('review_bp.download_zip', test_id=test_id) }}"
+       class="btn btn-primary">📦 Download Processed PDFs + Logs</a>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('input[type="range"]').forEach(slider => {
+  slider.addEventListener('input', (e) => {
+    const valueSpan = document.getElementById('confidence-value-' + slider.id.split('-')[2]);
+    valueSpan.innerText = e.target.value;
+  });
+});
+</script>
+{% endblock %}
