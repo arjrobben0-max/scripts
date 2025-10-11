@@ -21,3 +21,8 @@
 2025-10-05 01:40:12,870 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
 2025-10-05 01:40:12,871 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
 2025-10-05 01:40:12,872 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-11 15:36:00,626 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
+2025-10-11 15:36:00,713 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-11 15:36:00,716 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-11 15:36:00,718 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-11 15:38:11,293 WARNING: 404 Not Found [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:227]
