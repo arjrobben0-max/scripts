@@ -1,1 +1,70 @@
-.venv/ 
+# -----------------------
+# Python cache/compiled files
+# -----------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -----------------------
+# Virtual environments
+# -----------------------
+.venv/
+env/
+venv/
+
+# -----------------------
+# Node.js (if used for frontend)
+# -----------------------
+node_modules/
+
+# -----------------------
+# Uploads, logs, and runtime data
+# -----------------------
+uploads/
+logs/
+*.log
+data/
+smartscripts/app/static/uploads/
+standard_front_page.pdf
+
+# -----------------------
+# Testing artifacts
+# -----------------------
+tests/
+coverage/
+htmlcov/
+
+# -----------------------
+# Environment and config files
+# -----------------------
+.env
+*.env
+*.ini
+*.toml
+*.cfg
+
+# -----------------------
+# Local databases
+# -----------------------
+*.sqlite3
+*.db
+
+# -----------------------
+# IDE/editor/system files
+# -----------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+*.bak
+
+# -----------------------
+# Ignore secrets or instance folders
+# -----------------------
+instance/
+secrets.json
+
+# -----------------------
+# Git metadata (usually safe to keep, but optional)
+# -----------------------
+.git/
