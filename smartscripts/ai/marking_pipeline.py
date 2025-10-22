@@ -10,7 +10,6 @@ from smartscripts.ai.ocr_engine import (
     extract_text_from_image,
     trocr_extract_with_confidence,
 )
-from smartscripts.services.overlay_service import add_overlay
 from smartscripts.utils.text_cleaner import clean_text
 from smartscripts.models import StudentSubmission
 from smartscripts.extensions import db
@@ -106,6 +105,9 @@ def mark_submission(
         image = cv2.imread(file_path)
         if image is None:
             raise ValueError("Failed to load image for annotation.")
+
+        # ✅ Local import to avoid circular import
+        from smartscripts.services.overlay_service import add_overlay
 
         annotated_image = add_overlay(image, overlay_type)
         if annotated_image is None:

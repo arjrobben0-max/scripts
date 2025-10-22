@@ -1,27 +1,27 @@
-# smartscripts/tasks/matching_tasks.py
 """
+smartscripts/tasks/matching_tasks.py
+------------------------------------
 Fuzzy Matching Tasks
--------------------
  - Match OCR IDs/names against class_list.csv
  - Updates OCRSubmission objects
  - Generates presence table CSV
+ - Supports pause/resume/cancel via TaskControl
 """
 
 import logging
+import time
 from pathlib import Path
 import pandas as pd
 from rapidfuzz import process, fuzz
-import time
+from flask import current_app, has_app_context
 
-from smartscripts.extensions import db
-from smartscripts.celery_app import celery
-from smartscripts.models.ocr_submission import OCRSubmission
-from smartscripts.models.submission_manifest import SubmissionManifest
-from smartscripts.models.task_control import TaskControl
+from smartscripts.extensions import celery, db
 
 logger = logging.getLogger(__name__)
 
-
+# ------------------------------------------------------
+# Fuzzy Matching Task
+# ------------------------------------------------------
 @celery.task(bind=True, name="smartscripts.tasks.matching_tasks.fuzzy_match_class_list")
 def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path: str):
     """
@@ -29,9 +29,22 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
     Updates OCRSubmission + returns presence table.
     Supports pause/resume/cancel via TaskControl.
     """
+    if not has_app_context():
+        from smartscripts.app import create_app
+        app = create_app("production")
+        with app.app_context():
+            return _run_matching_task(self, ocr_output, test_id, class_list_path)
+    else:
+        return _run_matching_task(self, ocr_output, test_id, class_list_path)
+
+
+def _run_matching_task(self, ocr_output: dict, test_id: int, class_list_path: str):
+    from smartscripts.models.ocr_submission import OCRSubmission
+    from smartscripts.models.submission_manifest import SubmissionManifest
+    from smartscripts.models.task_control import TaskControl
 
     task_id = self.request.id
-    logger.info(f"[Matching] Task {task_id} started for test {test_id}")
+    current_app.logger.info(f"[Matching] Task {task_id} started for test {test_id}")
 
     # Create or get TaskControl record
     db_state = TaskControl.query.filter_by(task_id=task_id).first()
@@ -44,7 +57,6 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
 
     try:
         class_df = pd.read_csv(class_list_path)
-
         ocr_results = ocr_output.get("ocr_results", [])
         total = len(ocr_results)
 
@@ -56,7 +68,7 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
             # -------------------
             if db_state.status == "CANCELLED":
                 self.update_state(state="REVOKED")
-                logger.warning(f"[Matching] Task {task_id} cancelled at {i}/{total}")
+                current_app.logger.warning(f"[Matching] Task {task_id} cancelled at {i}/{total}")
                 db_state.status = "CANCELLED"
                 db.session.commit()
                 return {
@@ -73,7 +85,7 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
             # Pause check
             # -------------------
             while db_state.status == "PAUSED":
-                logger.info(f"[Matching] Task {task_id} paused at {i}/{total}")
+                current_app.logger.info(f"[Matching] Task {task_id} paused at {i}/{total}")
                 time.sleep(2)
                 db.session.refresh(db_state)
 
@@ -99,7 +111,6 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
                 matched = True
                 matched_id = best_match_id[0]
                 confidence = best_match_id[1]
-
                 matched_row = class_df[class_df["student_id"] == matched_id].iloc[0]
                 matched_name = matched_row["name"]
 
@@ -107,20 +118,17 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
                 matched = True
                 matched_name = best_match_name[0]
                 confidence = best_match_name[1]
-
                 matched_row = class_df[class_df["name"] == matched_name].iloc[0]
                 matched_id = matched_row["student_id"]
 
-            results.append(
-                {
-                    "ocr_id": ocr_id,
-                    "ocr_name": ocr_name,
-                    "matched_id": matched_id,
-                    "matched_name": matched_name,
-                    "confidence": confidence,
-                    "matched": matched,
-                }
-            )
+            results.append({
+                "ocr_id": ocr_id,
+                "ocr_name": ocr_name,
+                "matched_id": matched_id,
+                "matched_name": matched_name,
+                "confidence": confidence,
+                "matched": matched,
+            })
 
             # -------------------
             # Update OCRSubmission
@@ -152,6 +160,7 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
         # Commit DB & generate presence table CSV
         # -------------------
         db.session.commit()
+
         manifest = SubmissionManifest.query.filter_by(test_id=test_id).first()
         if manifest:
             Path("presence_tables").mkdir(exist_ok=True)
@@ -162,12 +171,12 @@ def fuzzy_match_class_list(self, ocr_output: dict, test_id: int, class_list_path
         db_state.status = "COMPLETED"
         db.session.commit()
 
-        logger.info(f"[Matching] Completed fuzzy match for test {test_id}")
+        current_app.logger.info(f"[Matching] ✅ Completed fuzzy match for test {test_id}")
         return {"status": "COMPLETED", "test_id": test_id, "presence_table": results}
 
     except Exception as e:
         db.session.rollback()
         db_state.status = "FAILED"
         db.session.commit()
-        logger.exception(f"[Matching] Failed for test {test_id}: {e}")
+        current_app.logger.exception(f"[Matching] ❌ Failed for test {test_id}: {e}")
         return {"status": "FAILED", "test_id": test_id, "error": str(e)}

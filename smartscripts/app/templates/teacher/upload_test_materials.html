@@ -4,7 +4,9 @@
 {% block content %}
 <div class="container mt-4">
   <h2 class="mb-3">📂 Upload Test Materials</h2>
-  <p class="text-muted">Upload the required and optional files for this test.</p>
+  <p class="text-muted">
+    Upload all the required and optional files for <strong>{{ test.title }}</strong>.
+  </p>
 
   <!-- Flash messages -->
   {% with messages = get_flashed_messages(with_categories=true) %}
@@ -12,53 +14,64 @@
       {% for category, message in messages %}
         <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
           {{ message }}
-          <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
       {% endfor %}
     {% endif %}
   {% endwith %}
 
-  <!-- Upload form -->
-  <form method="POST" enctype="multipart/form-data" action="{{ url_for('dashboard_bp.create_test_redirect') }}">
+  <!-- Upload Form -->
+  <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload_bp.upload_file', test_id=test.id) }}">
     {{ form.hidden_tag() }}
 
     <div class="row g-3">
-      <!-- File uploads -->
       <div class="col-md-6">
-        <label class="form-label">Question Paper (Required)</label>
+        <label class="form-label">Question Paper</label>
         {{ form.question_paper(class="form-control") }}
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Marking Guide (Required)</label>
-        {{ form.marking_guide(class="form-control") }}
-      </div>
-
-      <div class="col-md-6">
-        <label class="form-label">Rubric (Optional)</label>
+        <label class="form-label">Rubric</label>
         {{ form.rubric(class="form-control") }}
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Answered Script (Optional)</label>
+        <label class="form-label">Marking Guide</label>
+        {{ form.marking_guide(class="form-control") }}
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Answered Script</label>
         {{ form.answered_script(class="form-control") }}
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Class List (Optional)</label>
+        <label class="form-label">Class List</label>
         {{ form.class_list(class="form-control") }}
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Student Scripts (Combined PDF, Required)</label>
+        <label class="form-label">Combined Scripts</label>
         {{ form.combined_scripts(class="form-control") }}
       </div>
     </div>
 
     <div class="mt-4">
-      <button type="submit" class="btn btn-primary">{{ form.submit.label.text }}</button>
-      <a href="{{ url_for('dashboard_bp.dashboard') }}" class="btn btn-secondary">Cancel</a>
+      {{ form.submit(class="btn btn-primary") }}
+      <a href="{{ url_for('dashboard_bp.dashboard') }}" class="btn btn-secondary ms-2">Cancel</a>
     </div>
   </form>
+
+  <!-- Test Info -->
+  <div class="card mt-5 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">🧾 Test Information</h5>
+      <p><strong>Title:</strong> {{ test.title }}</p>
+      <p><strong>Subject:</strong> {{ test.subject }}</p>
+      <p><strong>Grade:</strong> {{ test.grade_level }}</p>
+      <p><strong>Teacher:</strong> {{ current_user.name or current_user.email }}</p>
+      <p><strong>Exam Date:</strong> {{ test.exam_date or "Not set" }}</p>
+    </div>
+  </div>
 </div>
 {% endblock %}

@@ -1,10 +1,9 @@
 ﻿import sys
 import logging
-from logging.handlers import RotatingFileHandler
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
-import os
 
 from flask import Flask, render_template, g, current_app
 from flask_cors import CORS
@@ -13,7 +12,7 @@ from sqlalchemy.exc import SQLAlchemyError
 from dotenv import load_dotenv
 from alembic.config import Config
 from alembic import command
-from celery import Celery
+from concurrent_log_handler import ConcurrentRotatingFileHandler  # ✅ NEW
 
 # Load environment variables
 load_dotenv()
@@ -25,38 +24,22 @@ from smartscripts.extensions import (
     mail,
     migrate,
     configure_login_manager,
-    celery,
-    make_celery,
+    make_celery,  # used inside tasks, not here
 )
-
-# ─── Blueprints ─────────────────────────────────────────────
-from smartscripts.app.auth import auth_bp
-from smartscripts.app.main import main_bp
-from smartscripts.app.teacher import teacher_bp
-from smartscripts.app.teacher.ai_marking_routes import ai_marking_bp
-from smartscripts.app.teacher.analytics_routes import analytics_bp
-from smartscripts.app.teacher.upload_routes import upload_bp
-from smartscripts.app.teacher.preview_routes import preview_bp
-from smartscripts.app.teacher.download_routes import download_bp
-from smartscripts.app.teacher.profile_routes import teacher_profile_bp
-from smartscripts.app.teacher.manage_routes import manage_bp
-from smartscripts.app.student import student_bp
-from smartscripts.app.admin.routes import admin_bp
-from smartscripts.tasks.tasks_control import ocr_control_bp
-
-# ─── Config ─────────────────────────────────────────────
-from smartscripts.config import config_by_name, BaseConfig
 
 csrf = CSRFProtect()
 
 
-# ─── Flask Subclass (typed Celery attr) ───────────────────
+# ─── Flask subclass to attach Celery instance ───────────────
 class MyFlask(Flask):
-    celery: Optional[Celery] = None
+    celery: Optional[object] = None  # type: ignore
 
 
 # ─── Factory ──────────────────────────────────────────────
 def create_app(config_name: str = "default"):
+    """Application factory function."""
+    from smartscripts.config import config_by_name, BaseConfig
+
     config_class = config_by_name[config_name]
 
     app = MyFlask(
@@ -67,39 +50,42 @@ def create_app(config_name: str = "default"):
     )
     app.config.from_object(config_class)
 
-    # Secret key fallback
-    if not app.config.get("SECRET_KEY"):
-        app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "your-default-secret-key")
+    # ─── Secret key ─────────────────────────────────────────
+    app.config["SECRET_KEY"] = app.config.get(
+        "SECRET_KEY", os.getenv("SECRET_KEY", "your-default-secret-key")
+    )
 
-    # Init extensions
+    # ─── Mail config ────────────────────────────────────────
+    app.config.update(
+        MAIL_SERVER="smtp.gmail.com",
+        MAIL_PORT=587,
+        MAIL_USE_TLS=True,
+        MAIL_USERNAME=os.getenv("MAIL_USERNAME", "your_email@gmail.com"),
+        MAIL_PASSWORD=os.getenv("MAIL_PASSWORD", "your_app_password"),
+        MAIL_DEFAULT_SENDER=os.getenv("MAIL_DEFAULT_SENDER", "your_email@gmail.com"),
+    )
+
+    # ─── Initialize Flask extensions ─────────────────────────
     csrf.init_app(app)
     db.init_app(app)
     mail.init_app(app)
     migrate.init_app(app, db)
-
-    # Configure login manager
     configure_login_manager(app)
-    login_manager.login_view = "teacher_bp.auth_bp.login"  # ✅ Corrected blueprint path
-    login_manager.login_message_category = "warning"
 
-    # Init global Celery
-    make_celery(app)
-    app.celery = celery
-
-    # Ensure upload & log directories exist
+    # ─── Ensure folders exist ───────────────────────────────
     Path(app.config["UPLOAD_FOLDER"]).mkdir(parents=True, exist_ok=True)
     Path(app.config["LOG_DIR"]).mkdir(parents=True, exist_ok=True)
 
-    # CORS
+    # ─── CORS ───────────────────────────────────────────────
     if app.config.get("ENV") == "development":
         CORS(app, origins=["http://localhost:3000"], supports_credentials=True)
     else:
         CORS(app, supports_credentials=True)
 
-    # Logging
+    # ─── Logging ────────────────────────────────────────────
     setup_logging(app)
 
-    # DB engine/session (optional)
+    # ─── Database engine setup ──────────────────────────────
     from smartscripts.database import get_engine, get_session
     try:
         engine = get_engine(config_name)
@@ -126,7 +112,21 @@ def create_app(config_name: str = "default"):
             except Exception as e:
                 app.logger.error(f"DB session cleanup error: {e}", exc_info=True)
 
-    # ─── Register Blueprints ───────────────────────────────
+    # ─── Register Blueprints ────────────────────────────────
+    from smartscripts.app.auth import auth_bp
+    from smartscripts.app.main.routes import main_bp
+    from smartscripts.app.teacher import teacher_bp
+    from smartscripts.app.teacher.ai_marking_routes import ai_marking_bp
+    from smartscripts.app.teacher.analytics_routes import analytics_bp
+    from smartscripts.app.teacher.upload_routes import upload_bp
+    from smartscripts.app.teacher.preview_routes import preview_bp
+    from smartscripts.app.teacher.download_routes import download_bp
+    from smartscripts.app.teacher.profile_routes import teacher_profile_bp
+    from smartscripts.app.teacher.manage_routes import manage_bp
+    from smartscripts.app.student import student_bp
+    from smartscripts.app.admin.routes import admin_bp
+    from smartscripts.tasks.tasks_control import ocr_control_bp
+
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(main_bp)
     app.register_blueprint(teacher_bp, url_prefix="/teacher")
@@ -141,7 +141,7 @@ def create_app(config_name: str = "default"):
     app.register_blueprint(manage_bp, url_prefix="/teacher/manage")
     app.register_blueprint(ocr_control_bp)
 
-    # User loader
+    # ─── User loader ────────────────────────────────────────
     from smartscripts.models.user import User
 
     @login_manager.user_loader
@@ -153,19 +153,19 @@ def create_app(config_name: str = "default"):
             current_app.logger.error(f"[load_user] DB error: {e}", exc_info=True)
             return None
 
-    # Auto-run Alembic migrations in dev
+    # ─── Alembic migrations (dev only) ──────────────────────
     if app.config.get("ENV") == "development":
         run_alembic_migrations(app)
 
-    # Error handlers
+    # ─── Error handlers ─────────────────────────────────────
     register_error_handlers(app)
 
-    # Context processors
+    # ─── Context processors ─────────────────────────────────
     @app.context_processor
     def inject_current_year():
         return {"current_year": datetime.utcnow().year}
 
-    # Shell context
+    # ─── Shell context ──────────────────────────────────────
     @app.shell_context_processor
     def make_shell_context():
         from smartscripts.models.test import Test
@@ -173,8 +173,9 @@ def create_app(config_name: str = "default"):
         return {"db": db, "Test": Test, "StudentSubmission": StudentSubmission}
 
     app.logger.info("App created successfully.")
-    app.logger.info(f"Uploads folder root: {app.config['UPLOAD_FOLDER']}")
+    app.logger.info(f"Uploads folder: {app.config['UPLOAD_FOLDER']}")
     app.logger.info(f"Static folder: {app.static_folder}")
+
     return app
 
 
@@ -189,33 +190,43 @@ def run_alembic_migrations(app):
         app.logger.error(f"Alembic migration error: {e}", exc_info=True)
 
 
-# ─── Logging ──────────────────────────────────────────────
+# ─── Logging (Concurrent-safe) ──────────────────────────────
 def setup_logging(app):
+    """Thread-safe logging setup using ConcurrentRotatingFileHandler."""
+    from smartscripts.config import BaseConfig
+
     formatter = logging.Formatter(
         "%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]"
     )
 
-    # Console
+    # Ensure log directory exists
+    os.makedirs(BaseConfig.LOG_DIR, exist_ok=True)
+    log_path = BaseConfig.LOG_FILE
+
+    # Stream handler (console)
     if not any(isinstance(h, logging.StreamHandler) for h in app.logger.handlers):
         stream_handler = logging.StreamHandler(sys.stdout)
         stream_handler.setLevel(logging.DEBUG if app.debug else logging.INFO)
         stream_handler.setFormatter(formatter)
         app.logger.addHandler(stream_handler)
 
-    # File
-    os.makedirs(BaseConfig.LOG_DIR, exist_ok=True)
-    log_path = BaseConfig.LOG_FILE
-    if not any(isinstance(h, RotatingFileHandler) for h in app.logger.handlers):
-        file_handler = RotatingFileHandler(log_path, maxBytes=10240, backupCount=10)
+    # Concurrent-safe file handler
+    if not any(isinstance(h, ConcurrentRotatingFileHandler) for h in app.logger.handlers):
+        file_handler = ConcurrentRotatingFileHandler(
+            log_path,
+            maxBytes=5 * 1024 * 1024,  # 5MB
+            backupCount=5,
+            encoding="utf-8"
+        )
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(formatter)
         app.logger.addHandler(file_handler)
 
     app.logger.setLevel(logging.INFO)
-    app.logger.info(f"Logging initialized → {log_path}")
+    app.logger.info(f"Concurrent logging initialized -> {log_path}")
 
 
-# ─── Errors ───────────────────────────────────────────────
+# ─── Error handlers ───────────────────────────────────────
 def register_error_handlers(app):
     @app.errorhandler(403)
     def forbidden_error(error):

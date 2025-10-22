@@ -8,7 +8,7 @@ from sqlalchemy.orm import joinedload
 
 from smartscripts.extensions import db
 from smartscripts.models import Test, AttendanceRecord
-from smartscripts.app.forms import CreateTestWithFilesForm
+from smartscripts.app.forms import TestForm
 from smartscripts.utils.file_helpers import get_uploaded_file_path
 
 dashboard_bp = Blueprint("dashboard_bp", __name__, url_prefix="/dashboard")
@@ -63,7 +63,7 @@ def get_valid_tests_for_user(user) -> list[Test]:
 def dashboard():
     """Render dashboard showing upload form and list of uploaded tests."""
     try:
-        form = CreateTestWithFilesForm()
+        form = TestForm()
         uploaded_tests = Test.query.filter_by(teacher_id=current_user.id).all()
 
         return render_template(
@@ -79,7 +79,7 @@ def dashboard():
         return render_template(
             "teacher/dashboard.html",
             uploaded_tests=[],
-            form=CreateTestWithFilesForm(),
+            form=TestForm(),
             teacher_name=current_user.username,
         )
 

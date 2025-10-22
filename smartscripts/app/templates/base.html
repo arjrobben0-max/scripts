@@ -64,12 +64,15 @@
                 <li><a class="dropdown-item" href="{{ url_for('teacher_profile_bp.profile') }}">Profile</a></li>
                 <li><a class="dropdown-item" href="{{ url_for('teacher_profile_bp.settings') }}">Settings</a></li>
                 <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="{{ url_for('teacher_bp.auth_bp.logout') }}">Logout</a></li>
+                <li><a class="dropdown-item" href="{{ url_for('auth_bp.logout') }}">Logout</a></li>
               </ul>
             </li>
           {% else %}
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('teacher_bp.auth_bp.login') }}">Login</a>
+              <a class="nav-link" href="{{ url_for('auth_bp.login') }}">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('auth_bp.register') }}">Register</a>
             </li>
           {% endif %}
         </ul>

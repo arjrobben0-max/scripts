@@ -19,7 +19,6 @@ from wtforms.validators import DataRequired, Email, EqualTo, Length, Optional
 # Authentication Forms
 # -----------------------
 
-
 class LoginForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
     password = PasswordField("Password", validators=[DataRequired()])
@@ -60,10 +59,25 @@ class RegisterForm(FlaskForm):
     submit = SubmitField("Register")
 
 
+class ForgotPasswordForm(FlaskForm):
+    """Request password reset by email"""
+    email = StringField("Email", validators=[DataRequired(), Email()])
+    submit = SubmitField("Send Reset Link")
+
+
+class ResetPasswordForm(FlaskForm):
+    """Reset the user's password using token"""
+    password = PasswordField("New Password", validators=[DataRequired(), Length(min=6)])
+    confirm_password = PasswordField(
+        "Confirm Password",
+        validators=[DataRequired(), EqualTo("password", message="Passwords must match")],
+    )
+    submit = SubmitField("Reset Password")
+
+
 # -----------------------
 # Teacher Authentication
 # -----------------------
-
 
 class TeacherLoginForm(FlaskForm):
     email = StringField("Email", validators=[DataRequired(), Email()])
@@ -73,9 +87,7 @@ class TeacherLoginForm(FlaskForm):
 
 
 class TeacherRegisterForm(FlaskForm):
-    username = StringField(
-        "Username", validators=[DataRequired(), Length(min=3, max=25)]
-    )
+    username = StringField("Username", validators=[DataRequired(), Length(min=3, max=25)])
     email = StringField("Email", validators=[DataRequired(), Email()])
     password = PasswordField(
         "Password",
@@ -98,13 +110,10 @@ class TeacherRegisterForm(FlaskForm):
 # Test Creation + File Upload
 # -----------------------
 
-
-class CreateTestWithFilesForm(FlaskForm):
-    """Single-step form for creating a test and uploading required/optional files."""
-
-    # --- Test details ---
+class TestForm(FlaskForm):
+    """Unified form for creating a test and uploading related files."""
     test_title = StringField("Test Title", validators=[DataRequired()])
-
+    
     subject = SelectField(
         "Subject",
         choices=[
@@ -130,46 +139,30 @@ class CreateTestWithFilesForm(FlaskForm):
         validators=[Optional()],
     )
 
-    exam_date = DateField(
-        "Exam Date (optional)", format="%Y-%m-%d", validators=[Optional()]
-    )
+    exam_date = DateField("Exam Date (optional)", format="%Y-%m-%d", validators=[Optional()])
     description = TextAreaField("Description", validators=[Optional(), Length(max=500)])
 
-    # --- File uploads ---
+    # File uploads
     question_paper = FileField(
         "Question Paper",
-        validators=[
-            FileRequired(),
-            FileAllowed(["pdf", "doc", "docx", "txt", "csv"], "Documents only!"),
-        ],
+        validators=[FileRequired(), FileAllowed(["pdf", "doc", "docx", "txt", "csv"], "Documents only!")],
     )
-
     rubric = FileField(
         "Rubric",
-        validators=[
-            Optional(),
-            FileAllowed(["pdf", "doc", "docx", "txt"], "Documents only!"),
-        ],
+        validators=[Optional(), FileAllowed(["pdf", "doc", "docx", "txt"], "Documents only!")],
     )
-
     marking_guide = FileField(
         "Marking Guide",
-        validators=[
-            FileRequired(),
-            FileAllowed(["pdf", "doc", "docx", "txt"], "Documents only!"),
-        ],
+        validators=[FileRequired(), FileAllowed(["pdf", "doc", "docx", "txt"], "Documents only!")],
     )
-
     answered_script = FileField(
         "Answered Script",
         validators=[Optional(), FileAllowed(["pdf", "doc", "docx"], "Documents only!")],
     )
-
     class_list = FileField(
         "Class List",
-        validators=[Optional(), FileAllowed(["csv", "txt"], "CSV or TXT files only!")],
+        validators=[Optional(), FileAllowed(["csv", "txt"], "CSV or TXT only!")],
     )
-
     combined_scripts = FileField(
         "Combined Scripts",
         validators=[FileRequired(), FileAllowed(["pdf"], "PDF only!")],
@@ -182,7 +175,6 @@ class CreateTestWithFilesForm(FlaskForm):
 # AI Grading Form
 # -----------------------
 
-
 class AIGradingForm(FlaskForm):
     submit = SubmitField("Start AI Grading")
 
@@ -191,14 +183,10 @@ class AIGradingForm(FlaskForm):
 # Bulk Override Upload Form
 # -----------------------
 
-
 class BulkOverrideUploadForm(FlaskForm):
     bulk_file = FileField(
         "Upload CSV or JSON file",
-        validators=[
-            FileRequired(),
-            FileAllowed(["csv", "json"], "CSV or JSON files only!"),
-        ],
+        validators=[FileRequired(), FileAllowed(["csv", "json"], "CSV or JSON files only!")],
     )
     submit = SubmitField("Submit Overrides")
 
@@ -207,17 +195,10 @@ class BulkOverrideUploadForm(FlaskForm):
 # File Management (Dashboard)
 # -----------------------
 
-
 class UploadFileForm(FlaskForm):
     file = FileField(
         "Upload File",
-        validators=[
-            FileRequired(),
-            FileAllowed(
-                ["pdf", "doc", "docx", "txt", "csv"],
-                "Only PDF, DOC, DOCX, TXT, CSV files are allowed!",
-            ),
-        ],
+        validators=[FileRequired(), FileAllowed(["pdf", "doc", "docx", "txt", "csv"], "Only PDF/DOC/TXT/CSV allowed!")],
     )
     submit = SubmitField("Upload")
 
@@ -230,17 +211,12 @@ class DeleteFileForm(FlaskForm):
 # Preprocessing & Inline Editing
 # -----------------------
 
-
 class PreprocessingForm(FlaskForm):
-    """Form to trigger OCR & preprocessing pipeline."""
     submit = SubmitField("Start Preprocessing")
 
 
 class InlineEditForm(FlaskForm):
-    """Inline form for correcting student name/ID after OCR."""
-    student_id = HiddenField("Student ID")  # Hidden primary key reference
+    student_id = HiddenField("Student ID")
     name = StringField("Corrected Name", validators=[Optional(), Length(min=2, max=100)])
-    student_number = StringField(
-        "Corrected Student ID", validators=[Optional(), Length(min=3, max=20)]
-    )
+    student_number = StringField("Corrected Student ID", validators=[Optional(), Length(min=3, max=20)])
     submit = SubmitField("Save Correction")

@@ -1,12 +1,17 @@
-2025-10-04 03:54:36,175 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:232]
-Traceback (most recent call last):
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2522, in get_property
-    return self._props[key]
-           ~~~~~~~~~~~^^^^^
-KeyError: 'graded_submissions'
-
-The above exception was the direct cause of the following exception:
-
+2025-10-22 10:06:27,432 WARNING: [OCR] Empty OCR for page 1 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:30,515 WARNING: [OCR] Empty OCR for page 2 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:33,297 WARNING: [OCR] Empty OCR for page 3 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:36,397 WARNING: [OCR] Empty OCR for page 4 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:39,507 WARNING: [OCR] Empty OCR for page 5 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:42,710 WARNING: [OCR] Empty OCR for page 6 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:45,435 WARNING: [OCR] Empty OCR for page 7 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:06:46,462 INFO: [OCR] Completed OCR pipeline for test 14 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:236]
+2025-10-22 10:11:05,145 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 10:11:05,161 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 10:12:02,622 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 10:12:02,624 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 10:12:02,627 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 10:13:17,808 ERROR: Exception on /teacher/manage/task_status/189014e6-9bc5-4f62-babf-74b2eecdc758 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
 Traceback (most recent call last):
   File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
     response = self.full_dispatch_request()
@@ -20,93 +25,114 @@ Traceback (most recent call last):
   File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
-  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\auth_routes.py", line 36, in login
-    user = User.query.filter_by(email=email, role="teacher").first()
-           ^^^^^^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_sqlalchemy\model.py", line 22, in __get__
-    return cls.query_class(
-           ~~~~~~~~~~~~~~~^
-        cls, session=cls.__fsa__.session()  # type: ignore[arg-type]
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 276, in __init__
-    self._set_entities(entities)
-    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 289, in _set_entities
-    coercions.expect(
-    ~~~~~~~~~~~~~~~~^
-        roles.ColumnsClauseRole,
-        ^^^^^^^^^^^^^^^^^^^^^^^^
-    ...<2 lines>...
-        post_inspect=True,
-        ^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\sql\coercions.py", line 388, in expect
-    insp._post_inspect
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 1338, in __get__
-    obj.__dict__[self.__name__] = result = self.fget(obj)
-                                           ~~~~~~~~~^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2724, in _post_inspect
-    self._check_configure()
-    ~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2401, in _check_configure
-    _configure_registries({self.registry}, cascade=True)
-    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4214, in _configure_registries
-    _do_configure_registries(registries, cascade)
-    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 4255, in _do_configure_registries
-    mapper._post_configure_properties()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2418, in _post_configure_properties
-    prop.init()
-    ~~~~~~~~~^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\interfaces.py", line 589, in init
-    self.do_init()
-    ~~~~~~~~~~~~^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1661, in do_init
-    self._generate_backref()
-    ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\relationships.py", line 2145, in _generate_backref
-    self._add_reverse_property(self.back_populates)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\relationships.py", line 1592, in _add_reverse_property
-    other = self.mapper.get_property(key, _configure_mappers=False)
-  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\mapper.py", line 2524, in get_property
-    raise sa_exc.InvalidRequestError(
-    ...<3 lines>...
-    ) from err
-sqlalchemy.exc.InvalidRequestError: Mapper 'Mapper[User(users)]' has no property 'graded_submissions'.  If this property was indicated from other mappers or configure events, ensure registry.configure() has been called.
-2025-10-04 03:54:36,210 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:124]
-2025-10-04 18:01:37,065 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 18:01:37,230 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 18:01:37,231 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 18:01:37,232 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 21:42:53,192 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 21:42:53,563 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 21:42:53,563 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 21:42:53,564 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 21:54:27,684 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 21:54:28,098 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 21:54:28,099 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 21:54:28,100 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 22:02:57,222 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 22:02:57,614 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 22:02:57,616 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 22:02:57,618 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 22:09:28,434 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 22:09:28,759 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 22:09:28,760 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 22:09:28,761 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 23:05:52,941 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 23:05:53,304 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 23:05:53,307 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 23:05:53,309 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-04 23:18:27,433 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-04 23:18:27,804 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-04 23:18:27,805 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-04 23:18:27,806 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:17:34,585 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:30:15,408 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:13:17,833 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:13:17,847 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:13:21,109 INFO: [OCR] Starting OCR pipeline for test 14 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:183]
+2025-10-22 10:13:23,847 INFO: Preprocessing started for test_id=14, task_id=a46cc420-7bf1-433d-95b8-103a33ef7190 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:13:26,421 ERROR: Exception on /teacher/manage/task_status/a46cc420-7bf1-433d-95b8-103a33ef7190 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:13:26,456 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:13:26,494 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:13:30,363 WARNING: [OCR] Empty OCR for page 0 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]

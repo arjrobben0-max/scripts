@@ -1,13 +1,12 @@
 ﻿from flask import Blueprint
-from sqlalchemy.exc import SQLAlchemyError
 
-# Register blueprint independently
+# Define the main authentication blueprint
 auth_bp = Blueprint(
-    "auth",  # endpoint prefix will be "auth"
+    "auth_bp",  # endpoint name
     __name__,
     template_folder="templates",
-    url_prefix="/auth"  # ensures routes start with /auth
+    url_prefix="/auth"
 )
 
-# Import routes after blueprint definition
+# Import routes after defining the blueprint
 from . import routes

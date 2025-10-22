@@ -1,28 +1,2153 @@
-2025-10-05 01:30:15,724 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:30:15,735 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:30:15,737 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:31:45,315 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:31:45,446 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:31:45,448 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:31:45,452 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:32:11,640 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:32:11,767 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:32:11,769 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:32:11,772 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:32:17,630 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:32:17,722 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:32:17,724 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:32:17,727 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:35:09,535 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:35:10,220 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:35:10,222 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:35:10,230 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-05 01:40:12,721 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-05 01:40:12,870 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-05 01:40:12,871 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-05 01:40:12,872 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-11 15:36:00,626 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:109]
-2025-10-11 15:36:00,713 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
-2025-10-11 15:36:00,716 INFO: Uploads folder root: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
-2025-10-11 15:36:00,718 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
-2025-10-11 15:38:11,293 WARNING: 404 Not Found [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:227]
+2025-10-22 10:13:33,671 WARNING: [OCR] Empty OCR for page 1 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:36,803 WARNING: [OCR] Empty OCR for page 2 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:39,662 WARNING: [OCR] Empty OCR for page 3 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:43,285 WARNING: [OCR] Empty OCR for page 4 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:47,026 WARNING: [OCR] Empty OCR for page 5 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:50,357 WARNING: [OCR] Empty OCR for page 6 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:53,364 WARNING: [OCR] Empty OCR for page 7 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 10:13:54,401 INFO: [OCR] Completed OCR pipeline for test 14 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:236]
+2025-10-22 10:18:02,082 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 10:18:02,100 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 10:18:59,484 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 10:18:59,488 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 10:18:59,495 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 10:43:43,889 ERROR: Exception on /teacher/manage/task_status/a46cc420-7bf1-433d-95b8-103a33ef7190 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:43:43,914 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:43:43,923 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:43:52,314 INFO: Preprocessing started for test_id=14, task_id=a767524f-0af0-4b8e-8b3f-2983597c1128 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:43:54,992 ERROR: Exception on /teacher/manage/task_status/a767524f-0af0-4b8e-8b3f-2983597c1128 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:43:55,004 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:43:55,024 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:44:11,515 INFO: Preprocessing started for test_id=14, task_id=378bbd33-3b4e-40cf-9181-ab2d5a92cc62 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:44:14,120 ERROR: Exception on /teacher/manage/task_status/378bbd33-3b4e-40cf-9181-ab2d5a92cc62 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:44:14,131 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:44:14,142 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:44:26,280 INFO: Preprocessing started for test_id=14, task_id=1edb0df0-b685-40da-bab6-c0660ab52775 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:44:28,917 ERROR: Exception on /teacher/manage/task_status/1edb0df0-b685-40da-bab6-c0660ab52775 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:44:28,932 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:44:28,943 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:46:33,110 INFO: Preprocessing started for test_id=14, task_id=9ea8c39f-8cb1-4138-a5d3-56c474b61e10 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:46:35,617 INFO: Preprocessing started for test_id=14, task_id=d16d19fe-86ff-4cba-b96a-c0a38110e0ff [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:46:37,023 INFO: Preprocessing started for test_id=14, task_id=30b98344-9345-49e7-9ae2-25c4815185fc [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:46:39,659 ERROR: Exception on /teacher/manage/task_status/30b98344-9345-49e7-9ae2-25c4815185fc [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:46:39,670 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:46:39,677 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:49:45,132 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 10:49:45,145 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 10:50:39,323 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 10:50:39,327 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 10:50:39,333 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 10:50:39,337 INFO: Celery initialized with broker: redis://localhost:6379/0 and backend: db+sqlite:///C:\Users\ALEX\Desktop\Smartscripts\smartscripts\celery_results.sqlite [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:78]
+2025-10-22 12:08:19,107 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 12:08:19,131 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 12:09:50,375 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 12:09:50,379 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 12:09:50,381 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 12:10:20,530 ERROR: [load_user] DB error: (psycopg2.OperationalError) could not translate host name "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8) [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:153]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" to address: Name or service not known
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py", line 150, in load_user
+    return User.query.get(int(user_id))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" to address: Name or service not known
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 12:12:41,705 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 12:12:41,720 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 12:13:56,717 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 12:13:56,720 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 12:13:56,723 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 12:13:56,726 INFO: Celery initialized with broker: redis://localhost:6379/0 and backend: db+sqlite:///C:\Users\ALEX\Desktop\Smartscripts\smartscripts\celery_results.sqlite [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:78]
+2025-10-22 12:14:57,955 ERROR: Exception on /teacher/manage/task_status/30b98344-9345-49e7-9ae2-25c4815185fc [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 12:14:57,976 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 12:14:57,992 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 12:15:09,304 INFO: Preprocessing started for test_id=14, task_id=e7fb9816-0f8c-4179-ac15-3bf39b786cb1 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 12:15:12,872 ERROR: Exception on /teacher/manage/task_status/e7fb9816-0f8c-4179-ac15-3bf39b786cb1 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 12:15:12,883 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 12:15:12,893 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 14:28:41,482 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 14:28:41,507 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 14:28:49,428 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 14:28:49,449 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 14:29:59,679 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 14:29:59,697 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 14:29:59,702 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 14:29:59,711 INFO: Celery initialized with broker: redis://localhost:6379/0 and backend: db+sqlite:///C:\Users\ALEX\Desktop\Smartscripts\smartscripts\celery_results.sqlite [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:78]
+2025-10-22 14:30:02,865 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 14:30:03,023 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 14:30:03,126 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 14:32:33,811 WARNING: 404 Not Found [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:238]
+2025-10-22 14:32:44,011 ERROR: Exception on /teacher/manage/task_status/e7fb9816-0f8c-4179-ac15-3bf39b786cb1 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:32:44,033 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:32:44,046 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 14:32:49,687 INFO: Preprocessing started for test_id=14, task_id=e7465b6f-0c7b-4db9-bd1a-879da51dd032 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 14:32:52,433 ERROR: Exception on /teacher/manage/task_status/e7465b6f-0c7b-4db9-bd1a-879da51dd032 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:32:52,443 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:32:52,451 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 14:33:07,746 INFO: Preprocessing started for test_id=14, task_id=54c70143-3138-4f37-b25d-419974b16174 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 14:33:10,323 ERROR: Exception on /teacher/manage/task_status/54c70143-3138-4f37-b25d-419974b16174 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:33:10,332 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 14:33:10,346 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 14:42:56,585 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 14:42:56,603 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 14:44:19,454 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 14:44:19,457 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 14:44:19,460 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 15:08:59,585 ERROR: [load_user] DB error: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8) [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:153]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py", line 150, in load_user
+    return User.query.get(int(user_id))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 15:09:14,751 ERROR: [load_user] DB error: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8) [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:153]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py", line 150, in load_user
+    return User.query.get(int(user_id))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 15:09:30,094 ERROR: [load_user] DB error: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8) [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:153]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py", line 150, in load_user
+    return User.query.get(int(user_id))
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "<string>", line 2, in get
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\deprecations.py", line 386, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1126, in get
+    return self._get_impl(ident, loading.load_on_pk_identity)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 1135, in _get_impl
+    return self.session._get_impl(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        mapper,
+        ^^^^^^^
+    ...<6 lines>...
+        execution_options=self._execution_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+        self,
+    ...<5 lines>...
+        bind_arguments=bind_arguments,
+    )
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+    ~~~~~~~~~~~~~~~^
+        q,
+        ^^
+    ...<2 lines>...
+        bind_arguments=bind_arguments,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 15:10:20,294 ERROR: Exception on /teacher/auth/login [POST] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\auth_routes.py", line 36, in login
+    user = User.query.filter_by(email=email, role="teacher").first()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 15:10:20,416 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\auth_routes.py", line 36, in login
+    user = User.query.filter_by(email=email, role="teacher").first()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 2759, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\query.py", line 2857, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+        params,
+        ^^^^^^^
+        execution_options={"_sa_orm_load_options": self.load_options},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ~~~~~~~~~~~~~~~~~~~~~~^
+        statement,
+        ^^^^^^^^^^
+    ...<4 lines>...
+        _add_event=_add_event,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2241, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 2110, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3273, in connect
+    return self._connection_cls(self)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        err, dialect, engine
+        ^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 2436, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 3297, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 1264, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 713, in checkout
+    rec = pool._do_get()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 179, in _do_get
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\impl.py", line 177, in _do_get
+    return self._create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 675, in __init__
+    self.__connect()
+    ~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    with util.safe_reraise():
+         ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 224, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\pool\base.py", line 897, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+                                         ~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\create.py", line 646, in connect
+    return dialect.connect(*cargs, **cparams)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\sqlalchemy\engine\default.py", line 625, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)  # type: ignore[no-any-return]  # NOQA: E501
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\psycopg2\__init__.py", line 135, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) connection to server at "dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com" (35.227.164.209), port 5432 failed: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-10-22 15:10:20,660 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 15:36:53,735 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 15:36:53,751 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 15:38:37,811 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 15:38:37,815 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 15:38:37,826 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 15:41:58,183 ERROR: Exception on /teacher/manage/task_status/54c70143-3138-4f37-b25d-419974b16174 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:41:58,204 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:41:58,218 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 15:42:32,849 INFO: Preprocessing started for test_id=14, task_id=2e2f1740-9540-4648-9d91-1633cff04631 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 15:43:12,947 ERROR: Exception on /teacher/manage/task_status/2e2f1740-9540-4648-9d91-1633cff04631 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:43:12,962 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:43:12,971 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 15:43:21,104 INFO: Preprocessing started for test_id=14, task_id=e3f6f6c9-c69a-4913-952f-6258bdcd9e63 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 15:43:55,862 ERROR: Exception on /teacher/manage/task_status/e3f6f6c9-c69a-4913-952f-6258bdcd9e63 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:43:55,872 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:43:55,883 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 15:54:45,698 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 15:54:45,759 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 15:54:45,938 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 15:54:45,941 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 15:54:45,944 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 15:54:45,948 INFO: Celery initialized with broker: redis://localhost:6379/0 and backend: db+sqlite:///C:\Users\ALEX\Desktop\Smartscripts\smartscripts\celery_results.sqlite [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:81]
+2025-10-22 15:55:28,858 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 15:55:28,871 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 15:55:29,185 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 15:55:29,188 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 15:55:29,191 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 15:57:53,530 ERROR: Exception on /teacher/manage/task_status/e3f6f6c9-c69a-4913-952f-6258bdcd9e63 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:57:53,558 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 15:57:53,588 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 15:58:18,161 INFO: Preprocessing started for test_id=14, task_id=c45aca7d-c115-40ee-8908-46481f055a25 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 15:58:52,887 INFO: Preprocessing started for test_id=14, task_id=3a6f0b82-49fa-4061-92fa-edd795994cae [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 16:00:04,470 INFO: Preprocessing started for test_id=14, task_id=05c83a03-b5b5-400a-9ae4-c51e603642c7 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 17:48:10,457 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 17:48:10,481 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 17:48:10,672 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 17:48:10,677 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 17:48:10,683 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 17:48:10,696 INFO: ✅ Celery initialized with broker: redis://localhost:6379/0 and backend: db+postgresql://scripts_db_o3pn_user:qK7B95xPIPOog4PMWuDJTEZvDtYLQeBR@dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com/scripts_db_o3pn?sslmode=require [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:73]
+2025-10-22 17:56:06,846 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 17:56:06,878 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 17:56:07,116 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 17:56:07,120 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 17:56:07,127 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 17:56:07,131 INFO: ✅ Celery initialized with broker: redis://localhost:6379/0 and backend: db+postgresql://scripts_db_o3pn_user:qK7B95xPIPOog4PMWuDJTEZvDtYLQeBR@dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com/scripts_db_o3pn?sslmode=require [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:73]
+2025-10-22 17:56:45,444 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 17:56:45,473 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 17:56:46,125 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 17:56:46,128 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 17:56:46,132 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 17:58:37,364 INFO: Preprocessing started for test_id=14, task_id=2da7f118-195f-4f18-bdc8-96b8f18372e5 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 17:59:55,304 INFO: Preprocessing started for test_id=14, task_id=7c6ba027-d147-45a8-83ff-4fd95741769a [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 18:00:18,635 ERROR: [OCR] Task failed: cannot unpack non-iterable NoneType object [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:224]
+2025-10-22 18:00:22,899 ERROR: Exception on /teacher/manage/task_status/2da7f118-195f-4f18-bdc8-96b8f18372e5 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 453, in exception_to_python
+    exc_type = exc['exc_type']
+               ~~~^^^^^^^^^^^^
+KeyError: 'exc_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 276, in task_status
+    elif result.state == "STARTED":
+         ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 47, in _inner
+    return fun(*args, **kwargs)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 175, in _get_task_meta_for
+    return self.meta_from_decoded(data)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 520, in meta_from_decoded
+    meta['result'] = self.exception_to_python(meta['result'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 455, in exception_to_python
+    raise ValueError("Exception information must include "
+                     "the exception type") from e
+ValueError: Exception information must include the exception type
+2025-10-22 18:00:22,936 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 453, in exception_to_python
+    exc_type = exc['exc_type']
+               ~~~^^^^^^^^^^^^
+KeyError: 'exc_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 276, in task_status
+    elif result.state == "STARTED":
+         ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 47, in _inner
+    return fun(*args, **kwargs)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 175, in _get_task_meta_for
+    return self.meta_from_decoded(data)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 520, in meta_from_decoded
+    meta['result'] = self.exception_to_python(meta['result'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 455, in exception_to_python
+    raise ValueError("Exception information must include "
+                     "the exception type") from e
+ValueError: Exception information must include the exception type
+2025-10-22 18:00:22,954 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 18:02:15,314 ERROR: [OCR] Task failed: cannot unpack non-iterable NoneType object [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:224]
+2025-10-22 18:02:22,436 ERROR: Exception on /teacher/manage/task_status/7c6ba027-d147-45a8-83ff-4fd95741769a [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 453, in exception_to_python
+    exc_type = exc['exc_type']
+               ~~~^^^^^^^^^^^^
+KeyError: 'exc_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 47, in _inner
+    return fun(*args, **kwargs)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 175, in _get_task_meta_for
+    return self.meta_from_decoded(data)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 520, in meta_from_decoded
+    meta['result'] = self.exception_to_python(meta['result'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 455, in exception_to_python
+    raise ValueError("Exception information must include "
+                     "the exception type") from e
+ValueError: Exception information must include the exception type
+2025-10-22 18:02:22,444 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 453, in exception_to_python
+    exc_type = exc['exc_type']
+               ~~~^^^^^^^^^^^^
+KeyError: 'exc_type'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 270, in task_status
+    "state": result.state,
+             ^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 505, in state
+    return self._get_task_meta()['status']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 47, in _inner
+    return fun(*args, **kwargs)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\database\__init__.py", line 175, in _get_task_meta_for
+    return self.meta_from_decoded(data)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 520, in meta_from_decoded
+    meta['result'] = self.exception_to_python(meta['result'])
+                     ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 455, in exception_to_python
+    raise ValueError("Exception information must include "
+                     "the exception type") from e
+ValueError: Exception information must include the exception type
+2025-10-22 18:02:22,452 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 18:31:52,869 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 18:31:52,894 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 18:31:53,249 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 18:31:53,252 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 18:31:53,259 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 19:01:00,416 INFO: Preprocessing started for test_id=14, task_id=64f337d5-8c64-46b5-85f1-e63491873226 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 19:01:27,066 INFO: Preprocessing started for test_id=14, task_id=5a74b1b6-c05d-4d57-89a4-044a120338dc [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]
+2025-10-22 19:04:25,738 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 19:04:25,756 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 19:04:25,879 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 19:04:25,883 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 19:04:25,885 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 19:04:25,888 INFO: ✅ Celery initialized with broker: redis://localhost:6379/0 and backend: db+postgresql://scripts_db_o3pn_user:qK7B95xPIPOog4PMWuDJTEZvDtYLQeBR@dpg-d3lh5togjchc73cdi350-a.oregon-postgres.render.com/scripts_db_o3pn?sslmode=require [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\extensions.py:73]
+2025-10-22 19:04:34,832 INFO: Preprocessing started for test_id=14, task_id=00933a25-56ad-4fb1-bbb9-35107b6e01c4 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:249]

@@ -1,0 +1,139 @@
+2025-10-22 09:57:56,001 WARNING: [OCR] Empty OCR for page 0 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:57:59,532 WARNING: [OCR] Empty OCR for page 1 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:02,554 WARNING: [OCR] Empty OCR for page 2 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:05,712 WARNING: [OCR] Empty OCR for page 3 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:08,853 WARNING: [OCR] Empty OCR for page 4 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:11,538 WARNING: [OCR] Empty OCR for page 5 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:14,289 WARNING: [OCR] Empty OCR for page 6 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:17,144 WARNING: [OCR] Empty OCR for page 7 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]
+2025-10-22 09:58:18,170 INFO: [OCR] Completed OCR pipeline for test 14 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:236]
+2025-10-22 10:04:27,562 INFO: Concurrent logging initialized -> C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\app.log [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:226]
+2025-10-22 10:04:27,584 INFO: DB engine and session initialized. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:95]
+2025-10-22 10:05:29,469 INFO: App created successfully. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:175]
+2025-10-22 10:05:29,472 INFO: Uploads folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static\uploads [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:176]
+2025-10-22 10:05:29,475 INFO: Static folder: C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\static [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:177]
+2025-10-22 10:06:10,397 ERROR: Exception on /teacher/manage/task_status/7e05a6fe-5f1b-4bcf-bbe9-409a910bd943 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:06:10,418 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:06:10,429 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:06:14,253 INFO: [OCR] Starting OCR pipeline for test 14 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:183]
+2025-10-22 10:06:17,291 INFO: Preprocessing started for test_id=14, task_id=189014e6-9bc5-4f62-babf-74b2eecdc758 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py:244]
+2025-10-22 10:06:19,845 ERROR: Exception on /teacher/manage/task_status/189014e6-9bc5-4f62-babf-74b2eecdc758 [GET] [in C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:06:19,858 ERROR: 500 Internal Server Error [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:243]
+Traceback (most recent call last):
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_cors\extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+                                                ~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\teacher\manage_routes.py", line 260, in task_status
+    if isinstance(result.info, dict):
+                  ^^^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 468, in result
+    return self._get_task_meta()['result']
+           ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\result.py", line 444, in _get_task_meta
+    return self._maybe_set_cache(self.backend.get_task_meta(self.id))
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ALEX\AppData\Local\Programs\Python\Python313\Lib\site-packages\celery\backends\base.py", line 707, in get_task_meta
+    meta = self._get_task_meta_for(task_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DisabledBackend' object has no attribute '_get_task_meta_for'. Did you mean: 'get_task_meta_for'?
+2025-10-22 10:06:19,881 WARNING: DB session rolled back due to exception. [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\app\__init__.py:110]
+2025-10-22 10:06:23,756 WARNING: [OCR] Empty OCR for page 0 [in C:\Users\ALEX\Desktop\Smartscripts\smartscripts\tasks\ocr_tasks.py:216]

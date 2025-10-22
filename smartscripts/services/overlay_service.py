@@ -1,62 +1,71 @@
-﻿# smartscripts/services/overlay_service.py
-
-import cv2
+﻿import cv2
 import numpy as np
-from pathlib import Path
-from typing import List, Dict, Union
+import os
 
-from smartscripts.utils.overlay_utils import add_overlay
-
-def overlay_marks(
-    image_path: Union[str, Path],
-    marks: List[Dict],
-    output_path: Union[str, Path],
-) -> None:
+# Example utility function for overlaying tick/cross
+def add_overlay(image, overlay_type="tick"):
     """
-    Overlay ticks, crosses, or text scores on an image.
-
-    Each mark in marks should be a dict like:
-        {"x": int, "y": int, "type": "tick"|"cross"|"score", "value": str (optional)}
+    Add tick or cross overlay to an image.
+    
+    Args:
+        image: OpenCV image (numpy array)
+        overlay_type: "tick" or "cross"
+    
+    Returns:
+        Annotated OpenCV image
     """
-    image_path = Path(image_path)
-    output_path = Path(output_path)
+    if image is None:
+        raise ValueError("Input image is None")
 
-    # Load the image
-    img = cv2.imread(str(image_path))
-    if img is None:
-        raise FileNotFoundError(f"Cannot load image: {image_path}")
+    # Define overlay color and thickness
+    if overlay_type == "tick":
+        color = (0, 255, 0)  # Green
+        thickness = 5
+        start_point = (50, 50)
+        mid_point = (100, 100)
+        end_point = (200, 50)
+        # Draw tick
+        cv2.line(image, start_point, mid_point, color, thickness)
+        cv2.line(image, mid_point, end_point, color, thickness)
+    elif overlay_type == "cross":
+        color = (0, 0, 255)  # Red
+        thickness = 5
+        # Draw cross
+        h, w = image.shape[:2]
+        cv2.line(image, (0, 0), (w, h), color, thickness)
+        cv2.line(image, (w, 0), (0, h), color, thickness)
+    else:
+        raise ValueError(f"Unknown overlay_type={overlay_type}")
 
-    for mark in marks:
-        x = mark.get("x")
-        y = mark.get("y")
-        m_type = mark.get("type")
-        value = mark.get("value", "")
+    return image
 
-        # Skip if x or y are None
-        if x is None or y is None:
-            continue
 
-        # Convert to int
-        x, y = int(x), int(y)
+# If you have functions that need marking_pipeline
+# always import locally inside the function to avoid circular import
+def overlay_with_feedback(submission_id, overlay_type="tick"):
+    """
+    Annotate a submission image and save feedback.
+    """
+    # Local import to avoid circular import
+    from smartscripts.models import StudentSubmission
+    from smartscripts.ai.marking_pipeline import update_marked_submission
 
-        if m_type in ("tick", "cross"):
-            # ✅ Pass position as a tuple
-            img = add_overlay(img, m_type, position=(x, y), scale=0.15, centered=True)
-        elif m_type == "score" and value:
-            # Overlay text
-            cv2.putText(
-                img,
-                str(value),
-                (x, y),
-                cv2.FONT_HERSHEY_SIMPLEX,
-                0.8,
-                (0, 0, 255),
-                2,
-                lineType=cv2.LINE_AA,
-            )
-        else:
-            # Unknown type: skip
-            continue
+    submission = StudentSubmission.query.get(submission_id)
+    if not submission:
+        raise ValueError(f"Submission ID {submission_id} not found")
 
-    # Save the annotated image
-    cv2.imwrite(str(output_path), img)
+    image = cv2.imread(submission.file_path)
+    annotated = add_overlay(image, overlay_type)
+    save_dir = os.path.join("uploads", "marked", str(submission.test_id), str(submission.student_id))
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, f"marked_{os.path.basename(submission.file_path)}")
+    cv2.imwrite(save_path, annotated)
+
+    update_marked_submission(
+        submission_id=submission.id,
+        score=submission.score,
+        feedback=submission.feedback,
+        marked_file_path=save_path,
+    )
+
+    return save_path
